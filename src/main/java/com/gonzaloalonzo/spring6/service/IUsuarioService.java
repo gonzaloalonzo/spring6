@@ -9,7 +9,7 @@ public interface IUsuarioService {
     List<Usuario> listarUsuario();
     Usuario buscarUsuarioporId(int id_usuario);
 
-    Usuario ActualizarUsurio(Usuario usuario);
+    Usuario actualizarUsuario(Usuario usuario, int id_usuario);
 
     void eliminarUsuario(int id_usuario);
 }
