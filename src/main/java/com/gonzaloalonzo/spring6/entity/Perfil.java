@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name="perfil")
 public class Perfil {
     @Id
-    @Column
+    @Column(name="idperfil")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idperfil;
     @Column

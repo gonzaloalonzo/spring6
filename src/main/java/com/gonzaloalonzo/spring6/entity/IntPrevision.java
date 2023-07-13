@@ -10,13 +10,13 @@ import java.util.List;
 @Table(name="institucion_prevision")
 public class IntPrevision {
     @Id
-    @Column
+    @Column(name="id_inst_previsional")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id_inst_previsional;
+    int idInstPrevisional;
     @Column
     String descripcion;
-    @Column
-    Float porc_dcto;
+    @Column(name="porc_dcto")
+    Float porcDcto;
 
     @OneToMany(mappedBy = "insPre")
     List<Trabajador> listaTrabajadores;

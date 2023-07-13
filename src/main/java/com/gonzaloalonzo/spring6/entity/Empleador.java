@@ -10,17 +10,17 @@ import java.util.List;
 @Table(name="empleador")
 public class Empleador {
     @Id
-    @Column
+    @Column(name="id_empleador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id_empleador;
+    int idEmpleador;
     @Column
     int run;
     @Column
     String nombre;
-    @Column
-    String apellido_1;
-    @Column
-    String apellido_2;
+    @Column(name="apellido_1")
+    String apellido1;
+    @Column(name="apellido_2")
+    String apellido2;
     @Column
     String direccion;
     @Column

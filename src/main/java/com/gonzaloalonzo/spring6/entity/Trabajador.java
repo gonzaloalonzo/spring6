@@ -11,8 +11,8 @@ import java.util.List;
 public class Trabajador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    int id_trabajador;
+    @Column(name="id_trabajador")
+    int idTrabajador;
     @Column
     int run;
     @Column

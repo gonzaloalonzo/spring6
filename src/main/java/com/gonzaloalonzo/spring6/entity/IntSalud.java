@@ -8,11 +8,11 @@ import lombok.Data;
 @Table(name="institucion_salud")
 public class IntSalud {
     @Id
-    @Column
+    @Column(name="id_int_salud")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id_int_salud;
+    int idIntSalud;
     @Column
     String descripcion;
-    @Column
-    Float porc_dcto;
+    @Column(name="porc_dcto")
+    Float porcDcto;
 }

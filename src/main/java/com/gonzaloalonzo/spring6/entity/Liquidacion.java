@@ -4,30 +4,29 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @Entity
 @Table(name="liquidacion")
 public class Liquidacion {
     @Id
-    @Column
+    @Column(name="id_liquidacion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id_liquidacion;
+    int idLiquidacion;
     @Column
     LocalDate periodo;
-    @Column
-    int sueldo_imponible;
-    @Column
-    int sueldo_liquido;
-    @Column
-    int monto_inst_salud;
-    @Column
-    int monto_inst_previsional;
-    @Column
-    int total_descuento;
-    @Column
-    int total_haberes;
+    @Column(name="sueldo_imponible")
+    int sueldoImponible;
+    @Column(name="sueldo_liquido")
+    int sueldoLiquido;
+    @Column(name="monto_inst_salud")
+    int montoInstSalud;
+    @Column(name="monto_inst_previsional")
+    int montoInstPrevisional;
+    @Column(name="total_descuento")
+    int totalDescuento;
+    @Column(name="total_haberes")
+    int totalHaberes;
     @Column
     int anticipo;
 

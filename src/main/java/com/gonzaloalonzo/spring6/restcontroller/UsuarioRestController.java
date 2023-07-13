@@ -19,8 +19,8 @@ public class UsuarioRestController {
     }
 
     @GetMapping("/{idUsuario}")
-    public Usuario buscarUsuarioPorId(@PathVariable int id_usuario){
-        return objUsuarioService.buscarUsuarioporId(id_usuario);
+    public Usuario buscarUsuarioPorId(@PathVariable int idUsuario){
+        return objUsuarioService.buscarUsuarioporId(idUsuario);
     }
 
     @GetMapping
@@ -28,12 +28,12 @@ public class UsuarioRestController {
     return objUsuarioService.listarUsuario();}
 
     @PutMapping
-    public Usuario actualizarUsuario(@RequestBody Usuario usuarioActualizar, @PathVariable int id_usuario){
-        return objUsuarioService.actualizarUsuario(usuarioActualizar,id_usuario);
+    public Usuario actualizarUsuario(@RequestBody Usuario usuarioActualizar, @PathVariable int idUsuario){
+        return objUsuarioService.actualizarUsuario(usuarioActualizar,idUsuario);
     }
 
     @DeleteMapping
-    public void eliminarUsuario(@PathVariable int id_usuario){
-        objUsuarioService.eliminarUsuario(id_usuario);
+    public void eliminarUsuario(@PathVariable int idUsuario){
+        objUsuarioService.eliminarUsuario(idUsuario);
     }
 }

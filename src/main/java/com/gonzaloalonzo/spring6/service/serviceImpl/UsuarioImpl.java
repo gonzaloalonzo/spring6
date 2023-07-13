@@ -26,17 +26,17 @@ public class UsuarioImpl implements IUsuarioService {
     }
 
     @Override
-    public Usuario buscarUsuarioporId(int id_usuario) {
-        return objIUsuarioRepo.findById(id_usuario).orElseThrow(()->new NoSuchElementException("Usuario no encontrado"));
+    public Usuario buscarUsuarioporId(int idUsuario) {
+        return objIUsuarioRepo.findById(idUsuario).orElseThrow(()->new NoSuchElementException("Usuario no encontrado"));
     }
 
     @Override
-    public Usuario actualizarUsuario(Usuario usuario, int id_usuario) {
+    public Usuario actualizarUsuario(Usuario usuario, int idUsuario) {
         return objIUsuarioRepo.save(usuario);
     }
 
     @Override
-    public void eliminarUsuario(int id_usuario) {
-        objIUsuarioRepo.deleteById(id_usuario);
+    public void eliminarUsuario(int idUsuario) {
+        objIUsuarioRepo.deleteById(idUsuario);
     }
 }

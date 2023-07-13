@@ -23,15 +23,15 @@ public class UsuarioController {
     }
 
     @GetMapping("/{idUsuario}")
-    public String listarUsuarioPorId(@PathVariable int id_usuario, Model model){
-        Usuario usuario = objUsuarioService.buscarUsuarioporId(id_usuario);
+    public String listarUsuarioPorId(@PathVariable int idUsuario, Model model){
+        Usuario usuario = objUsuarioService.buscarUsuarioporId(idUsuario);
         model.addAttribute("usuario", usuario);
         return "usuario";
     }
 
     @GetMapping("/crearUsuario")
     public String mostrarFormularioCrearUsuario (Model model){
-        return "crearUsuario";
+        return "registro";
     }
 
     @PostMapping("/crearUsuario")

@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id_usuario;
+    @Column(name="id_usuario")
+    int idUsuario;
     @Column
     int run;
     @Column
@@ -32,7 +33,4 @@ public class Usuario {
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="id_perfil",nullable = false)
     private Perfil perfil;
-
-
-
 }
