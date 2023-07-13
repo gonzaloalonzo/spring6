@@ -12,7 +12,7 @@ public class Liquidacion {
     @Id
     @Column(name="id_liquidacion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idLiquidacion;
+    Long idLiquidacion;
     @Column
     LocalDate periodo;
     @Column(name="sueldo_imponible")

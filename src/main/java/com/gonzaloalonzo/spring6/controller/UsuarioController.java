@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("usuario")
+@RequestMapping("/usuario")
 public class UsuarioController {
     @Autowired
     IUsuarioService objUsuarioService;
@@ -31,7 +31,7 @@ public class UsuarioController {
 
     @GetMapping("/crearUsuario")
     public String mostrarFormularioCrearUsuario (Model model){
-        return "registro";
+        return "crearUsuario";
     }
 
     @PostMapping("/crearUsuario")
@@ -47,7 +47,7 @@ public class UsuarioController {
         return "editarUsuario";
     }
 
-    @GetMapping("/{idUsuario}/eliminar")
+    @DeleteMapping("/{idUsuario}")
     public String mostrarEliminarUsuario(@PathVariable int id_usuario, Model model){
         Usuario usuarioEliminar =objUsuarioService.buscarUsuarioporId(id_usuario);
         model.addAttribute("usuario", usuarioEliminar);

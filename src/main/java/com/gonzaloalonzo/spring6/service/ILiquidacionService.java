@@ -7,7 +7,7 @@ import java.util.List;
 public interface ILiquidacionService {
     Liquidacion crearLiquidaciones (Liquidacion liquidacion);
     List<Liquidacion> listarLiquidaciones();
-    Liquidacion buscarLiquidacionPorId(int id_liquidacion);
+    Liquidacion buscarLiquidacionPorId(Long id_liquidacion);
     Liquidacion ActualizarLiquidacion(Liquidacion liquidacion);
-    void eliminarLiqudacion(int id_liquidacion);
+    void eliminarLiqudacion(Long id_liquidacion);
 }

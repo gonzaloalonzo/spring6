@@ -25,7 +25,7 @@ public class LiquidacionImpl implements ILiquidacionService {
     }
 
     @Override
-    public Liquidacion buscarLiquidacionPorId(int id_liquidacion) {
+    public Liquidacion buscarLiquidacionPorId(Long id_liquidacion) {
         return objILiquidacionRepo.findById(id_liquidacion).orElseThrow(()->new NoSuchElementException("Liquidacion no encontrada"));
     }
 
@@ -35,7 +35,7 @@ public class LiquidacionImpl implements ILiquidacionService {
     }
 
     @Override
-    public void eliminarLiqudacion(int id_liquidacion) {
+    public void eliminarLiqudacion(Long id_liquidacion) {
     objILiquidacionRepo.deleteById(id_liquidacion);
     }
 }
